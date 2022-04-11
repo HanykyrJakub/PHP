@@ -19,11 +19,11 @@ mysqli_query($con, "SET CHARACTER SET UTF8");
     <?php
 $q= "SELECT * FROM airport";
 $result = mysqli_query($con, $q);
-echo '<ul>' . PHP_EOL;
+echo '<table>' . PHP_EOL;
 while (($airport = mysqli_fetch_array($result, MYSQLI_ASSOC))!== null) {
-    echo '<li><b>' . $airport ['code'] . '</b>' . $airport ['name'] . '</li>' . PHP_EOL;
+    echo '<th>code</th><td><b>' . $airport ['code'] . '</td></b>' '<td>'. $airport ['name'] . '</td>' . PHP_EOL;
 }
-echo '</ul>' . PHP_EOL;
+echo '</table>' . PHP_EOL;
 ?>
 </body>
 </html>
