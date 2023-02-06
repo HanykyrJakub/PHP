@@ -1,7 +1,7 @@
 <?php
 interface Pushable{
-    public function push($value);
-    public function pop();
+    public function push(mixed $value);
+    public function pop(): mixed;
 }
 
 class LIFO implements Pushable
